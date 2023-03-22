@@ -1,8 +1,9 @@
+import sys
 A=[]
 bigNumber =0
 row,column = 0, 0
 for i in range(9):
-    i = list(map(int,input().split(" ")))
+    i = list(map(int,sys.stdin.readline().split(" ")))
     A.append(i)
 for i in range(9):
     for j in range(9):
