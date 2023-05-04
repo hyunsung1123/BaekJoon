@@ -1,15 +1,10 @@
 import sys
 input = sys.stdin.readline
 n,m= map(int,input().split(" "))
-A = []
-B = []
-for i in range(n):
-    A.append(input())
+A = set([input() for _ in range(n)])
+answer = 0
 for i in range(m):
-    B.append(input())
-answer =0
-
-for i in B:
-    if i in A:
+    a = input()
+    if a in A:
         answer +=1
 print(answer)
