@@ -13,7 +13,6 @@ for idx,val in enumerate(A): # 가로수 끼리의 거리 저장.
         break
     else:
         B.append(A[idx+1]-val)
-B.sort()
 #최대공약수가 1 이면 거리에서 -1 한게 설치해야하는 가로수의 수
 #그 외는 거리에서 최대공약수를 나눈 몫의 합
 # B의 원소들로 최대공약수구하기
