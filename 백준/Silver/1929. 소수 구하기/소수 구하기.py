@@ -15,16 +15,13 @@ def is_prime_number(x):
 
 N,M = map(int,input().strip().split())
 A=[]
-B=[]
 for i in range(1,M+1):
     if is_prime_number(i):
         A.append(i)
-for i in range(1,N):
-    if is_prime_number(i):
-        B.append(i)
-C = set(A) & set(B)
-D = sorted(list(set(A) - C))
-for i in D:
-    print(i,end='\n')
+for i in A:
+    if i<N:
+        continue
+    else:
+        print(i,end='\n')
 
     
