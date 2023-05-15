@@ -8,8 +8,7 @@ while(True):
     if sentence == ".":
         break
     sentence_lst = list(sentence)
-    while(len(sentence_lst)!=0):
-        item = sentence_lst.pop(0)
+    for item in sentence_lst:
         if item == "(" or item == ")" or item == "[" or item == "]":
             result += item
         if "()" in result or "[]" in result:
