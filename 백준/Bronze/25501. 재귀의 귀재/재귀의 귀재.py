@@ -1,15 +1,18 @@
-def recursion(s,low,high,count):
-    if low >= high:
-        return (1,count)
-    elif s[low] != s[high]:
-        return (0,count)
+import sys
+input = sys.stdin.readline
+
+def isPalindrome(s, l , r, count):
+    count+=1
+    if l<r:
+        if s[l] != s[r]:
+            return 0,count
+        else:
+            return isPalindrome(s,l+1,r-1,count)
     else:
-        count+=1
-        return recursion(s,low+1,high-1,count)
-def isPalindrome(s):
-    count=1
-    return recursion(s,0,len(s)-1,count)
-a = int(input())
-for i in range(a):
-    str_input = input()
-    print(*isPalindrome(str_input))
+        return 1, count
+    
+T = int(input())
+for _ in range(T):
+    my_input = input().strip()
+    count=0
+    print(*isPalindrome(my_input,0,len(my_input)-1,count))
