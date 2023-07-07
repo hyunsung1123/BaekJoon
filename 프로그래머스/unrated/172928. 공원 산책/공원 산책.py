@@ -21,44 +21,28 @@ def solution(park, routes):
         square = int(square)
         if direction == 'E':
             for i in range(1, square + 1):
-                try:
-                    if y + i >= len(park_list[x]) or park_list[x][y + i] == 'X':
-                        move = False
-                        break
-                except:
+                if y + i >= len(park_list[x]) or park_list[x][y + i] == 'X':
                     move = False
                     break
             if move:
                 y += square
         elif direction == 'S':
             for i in range(1, square + 1):
-                try:
-                    if x + i >= len(park_list) or park_list[x + i][y] == 'X':
-                        move = False
-                        break
-                except:
+                if x + i >= len(park_list) or park_list[x + i][y] == 'X':
                     move = False
                     break
             if move:
                 x += square
         elif direction == 'W':
             for i in range(1, square + 1):
-                try:
-                    if y - i < 0 or park_list[x][y - i] == 'X':
-                        move = False
-                        break
-                except:
+                if y - i < 0 or park_list[x][y - i] == 'X':
                     move = False
                     break
             if move:
                 y -= square
         elif direction == 'N':
             for i in range(1, square + 1):
-                try:
-                    if x - i < 0 or park_list[x - i][y] == 'X':
-                        move = False
-                        break
-                except:
+                if x - i < 0 or park_list[x - i][y] == 'X':
                     move = False
                     break
             if move:
