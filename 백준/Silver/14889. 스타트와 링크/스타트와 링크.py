@@ -18,6 +18,7 @@ def back_tracking(depth,idx):
                 elif visited[i] != 0 and visited[j] !=0:
                     team2 += ability[i][j]
         minimum = min(minimum, abs(team1-team2)) #최소값으로 변경
+        return 
 
     for i in range(idx,N):
         if visited[i] == 0:
